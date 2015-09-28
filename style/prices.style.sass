@@ -1,0 +1,294 @@
+@import "bourbon/bourbon"
+//@import url(//fonts.googleapis.com/css?family=Lato:100,300,400,700,900)
+//@import url(http://webfonts.ru/import/intro.css)
+
+$font-stack: Lato, Helvetica Neue, sans-serif
+$border-width: 5px
+$border-color-social: white
+$border-color-cta: #ffed2c
+$social-cell-size: 66px
+$text-color: white
+
+=menu-lettering($spacing: 2px)
+  font-family: Lato, Helvetica Neue, sans-serif
+  font-weight: 300
+  font-size: 0.8rem
+  text-transform: uppercase
+  letter-spacing: $spacing
+
+=lettering($spacing: 2px, $font-size: 1rem, $font-weight: 100)
+  font-family: Lato, Helvetica Neue, sans-serif
+  font-weight: $font-weight
+  font-size: $font-size
+  text-transform: uppercase
+  letter-spacing: $spacing
+
+=title-lettering($spacing: 2px)
+  font-family: 'Intro', Helvetica Neue, sans-serif
+  text-transform: uppercase
+  font-size: 6rem
+
+html, body
+  background-color: #FCFCFC
+  color: black
+  height: 100%
+  width: 100%
+  font-family: $font-stack
+  margin: 0
+  padding: 0
+
+p
+  margin: 0
+  padding: 0
+  font-family: Lato, Helvetica Neue, sans-serif
+  font-weight: 300
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 0 0 7px 0
+  font-family: Lato, Helvetica Neue, sans-serif
+  font-weight: 500
+  text-transform: uppercase
+
+h1
+  width: 100%
+  text-align: center
+  font-size: 2rem
+  letter-spacing: 7px
+  &:after
+    content: "\a —"
+    white-space: pre
+    font-weight: 300
+
+h2
+  width: 100%
+  text-align: center
+  font-size: 1.5em
+  letter-spacing: 4px
+//&:after
+  content: "\a —"
+  white-space: pre
+  font-weight: 100
+
+p
+  text-align: left
+  //padding-left: 200px
+  //padding-right: 200px
+
+.rotate
+  transition: 0.5s //ease-in-out
+  //@include transform(rotate(-180deg))
+  @include transform(scaleY(-1))
+
+  section
+//some styles
+
+//a
+  text-decoration: none
+  color: #ffffff
+  &:visited
+    color: #ffffff
+.navbar__menu
+  //position: fixed
+  top: 0
+  width: 100%
+  z-index: 100
+  background-color: #000
+  color: #FFFFFF
+  +menu-lettering()
+  @include display(flex)
+  @include flex-wrap(wrap)
+  @include justify-content(flex-end)
+  .navbar__menu__group
+    @include display(flex)
+    @include flex-wrap(wrap)
+    @include justify-content(center)
+  .navbar__menu__group--logo
+    width: 33.333%
+    @include justify-content(flex-start)
+    @include display(flex)
+    @include align-items(center)
+    a
+      height: 66.666%
+      text-align: center
+      padding-left: 10px
+      img
+        height: 100%
+  .navbar__menu__group--left
+    width: 33.333%
+    @media screen and (max-width: 800px)
+      display: none
+  .navbar__menu__group--center
+    width: 16.6665%
+    @media screen and (max-width: 800px)
+      display: none
+  .navbar__menu__group--right
+    width: 16.6665%
+    @include justify-content(flex-end)
+  a
+    text-decoration: none
+    color: $text-color
+    &:visited
+      color: $text-color
+  .navbar__menu__item
+    padding: 25px
+    cursor: pointer
+    text-align: center
+    &:hover
+      background-color: $border-color-cta
+      color: black
+      a
+        color: black
+      //font-weight: 500
+  .navbar__menu__item--stroked
+    padding: 25px - $border-width
+    border: $border-width solid $border-color-cta
+
+
+.ad
+  //height: 20vh
+  width: 100vw
+  @include display(flex)
+  @include justify-content(center)
+  border-bottom: 1px solid #dddddd
+  background-color: #fff
+  .ad__content
+    font-family: Lato, Helvetica Neue, sans-serif
+    font-weight: 300
+    letter-spacing: 1px
+    text-transform: uppercase
+    padding: 30px 10px
+    @include display(flex)
+    @include justify-content(center)
+    @include align-items(flex-end)
+
+.ad--t
+  width: 100vw
+  @include display(flex)
+  @include justify-content(center)
+  background-color: #F8EB5B
+  .ad__content
+    font-family: Lato, Helvetica Neue, sans-serif
+    font-weight: 300
+    letter-spacing: 1px
+    text-transform: uppercase
+    padding: 30px 10px
+    @include display(flex)
+    @include justify-content(center)
+    @include align-items(flex-end)
+    .ad__content__text
+      b
+        font-weight: 700
+        border-bottom: 1px dashed black
+        &:hover
+          cursor: pointer
+
+
+.title
+  margin-top: 40px
+  margin-bottom: 0px
+  position: relative
+  width: 100vw
+  height: 100vh*(1/3)
+  .title__picture
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 1
+    background-image: url(../img/auto.jpg)
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+  .title__picture--darken
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 2
+    background-color: rgba(0, 0, 0, 0.5)
+  .title__content
+    position: absolute
+    z-index: 3
+    color: #000
+    top: 50%
+    left: 50%
+    @include transform(translate(-50%, -50%))
+    h1
+      font-size: 3rem
+      font-weight: 700
+      padding-bottom: 15px
+
+.prices
+  font-family: Lato, Helvetica Neue, sans-serif
+  ul>li
+    //text-transform: uppercase
+    //letter-spacing: 1px
+    font-size: 1.5em
+    font-weight: 300
+  .tab-content
+    padding: 20px
+    padding-bottom: 0
+    border-left: 1px solid #dddddd
+    border-right: 1px solid #dddddd
+    border-bottom: 1px solid #dddddd
+    border-bottom-right-radius: 4px
+    border-bottom-left-radius: 4px
+    background-color: white
+    font-weight: 300
+    font-size: 1.1em
+    .table
+      tr
+        td
+          &:last-child
+            text-align: right
+        &:first-of-type
+          td
+            border-top: none !important
+  p
+    padding-top: 0px
+    padding-bottom: 0px
+    margin-top: 20px
+    margin-bottom: 50px
+    padding-left: 21px
+    //padding-left: 28px
+    //padding-right: 28px
+    font-size: 1.1em
+    line-height: 1.5
+    border-left: 7px solid yellow
+
+.payment
+  padding-bottom: 100px
+  h2
+    padding-bottom: 25px
+  font-weight: 300
+  a
+    width: 100%
+    display: block
+    padding: 10px 28px
+    font-size: 1.3em
+    padding-left: 28px
+    img
+      height: 1em
+      transition: 0.5s ease-in-out
+      //@include transform(rotate(-90deg))
+    &:hover
+      text-decoration: none
+      span
+        border-bottom: 1px solid #337ab7
+  .payment__method
+    border-bottom: 1px solid #dddddd
+  .collapse
+    padding-bottom: 10px
+    padding-left: 28px
+    //margin-left: 28px
+    font-size: 1.1em
+  p
+    padding-top: 0px
+    padding-bottom: 0px
+    margin-top: 20px
+    margin-bottom: 50px
+    padding-left: 21px
+    //padding-left: 28px
+    //padding-right: 28px
+    font-size: 1.1em
+    line-height: 1.5
+    border-left: 7px solid yellow

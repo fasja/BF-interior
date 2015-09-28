@@ -1,0 +1,385 @@
+@import "bourbon/bourbon"
+//@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic)
+@import url(http://webfonts.ru/import/intro.css)
+@import url(http://webfonts.ru/import/lato.css)
+
+
+$font-stack: Helvetica Neue, sans-serif
+$border-width: 5px
+$border-color-social: white
+$border-color-cta: #ffed2c
+$social-cell-size: 66px
+$text-color: white
+
+=menu-lettering($spacing: 2px)
+  font-family: 'Lato', Helvetica Neue, sans-serif
+  font-weight: 300
+  font-size: 0.7rem
+  text-transform: uppercase
+  letter-spacing: $spacing
+
+=lettering($spacing: 2px, $font-size: 1rem, $font-weight: 100)
+  font-family: 'Lato', Helvetica Neue, sans-serif
+  font-weight: $font-weight
+  font-size: $font-size
+  text-transform: uppercase
+  letter-spacing: $spacing
+
+=title-lettering($spacing: 2px)
+  font-family: 'Intro', Helvetica Neue, sans-serif
+  text-transform: uppercase
+  font-size: 6rem
+
+=border-gallery()
+  outline: solid #000000 2px
+  outline-offset: -2px
+
+=gallery-hover-effect()
+  cursor: pointer
+  .gallery-overlay
+    opacity: 0.2
+    transition: 0.4s
+  .gallery-item-title
+    display: block
+    transition: 0.4s
+
+=gallery-layers()
+  .gallery-overlay
+    position: absolute
+    width: 100%
+    height: 100%
+    background-color: #000000
+    opacity: 0.5
+  .gallery-item-title
+    font-family: 'Lato', Helvetica Neue, sans-serif
+    font-weight: 300
+    font-size: 1.5rem
+    letter-spacing: 2px
+    position: absolute
+    left: 50%
+    top: 50%
+    text-align: center
+    @include transform(translateX(-50%) translateY(-25%))
+    color: $text-color
+    display: none
+
+html, body
+  //background-color: black
+  color: white
+  height: 100%
+  width: 100%
+  font-family: $font-stack
+  margin: 0
+  padding: 0
+
+*
+  z-index: 0
+
+.background
+  width: 100vw
+  height: 100vh
+  position: fixed
+  z-index: -1
+  background-image: url(../img/interior.JPG)
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  .background__overlay
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0,0.7)
+
+p
+  margin: 0
+  padding: 0
+  font-family: 'Lato', Helvetica Neue, sans-serif
+  font-weight: 300
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 0 0 7px 0
+  font-family: 'Lato', Helvetica Neue, sans-serif
+  font-weight: 500
+  text-transform: uppercase
+
+h1
+  width: 100%
+  text-align: center
+  font-size: 2rem
+  letter-spacing: 7px
+  &:after
+    content: "\a —"
+    white-space: pre
+    font-weight: 100
+
+h2
+  width: 100%
+  text-align: center
+  font-size: 1.5rem
+  letter-spacing: 4px
+  //&:after
+    content: "\a —"
+    white-space: pre
+    font-weight: 100
+
+p
+  //width: 100%
+  text-align: center
+  padding-left: 200px
+  padding-right: 200px
+a
+  text-decoration: none
+  color: #ffffff
+  &:visited
+    color: #ffffff
+
+
+.navbar__menu
+  position: fixed
+  top: 0
+  width: 100%
+  z-index: 100
+  +menu-lettering()
+  @include display(flex)
+  @include flex-wrap(wrap)
+  @include justify-content(flex-end)
+  a
+    text-decoration: none
+    &:visited
+      color: #FFFFFF
+  .navbar__menu__group
+    @include display(flex)
+    @include flex-wrap(wrap)
+    @include justify-content(center)
+  .navbar__menu__group--left
+    width: 33.333%
+    @media screen and (max-width: 800px)
+      display: none
+  .navbar__menu__group--center
+    width: 16.6665%
+    @media screen and (max-width: 800px)
+      display: none
+  .navbar__menu__group--right
+    width: 16.6665%
+    @include justify-content(flex-end)
+    a
+      text-decoration: none
+      color: $text-color
+  .navbar__menu__item
+    padding: 25px
+    cursor: pointer
+    text-align: center
+    &:hover
+      background-color: #ffed2c
+      color: black
+      a
+        color: black
+  .navbar__menu__item--stroked
+    padding: 25px - $border-width
+    border: $border-width solid $border-color-cta
+.start-screen
+  width: 100%
+  height: 100%
+  //background-image: url(../img/auto.jpg)
+  //background-position: center center
+  //background-repeat: no-repeat
+  //background-size: cover
+  //.start-screen_overlay
+    width: 100%
+    height: 100%
+    background-color: rgba(0,0,0,0.7)
+    //opacity: 0.7
+  .start-screen__social-buttons
+    @media screen and (max-width: 800px)
+      display: none
+    position: absolute
+    @include transform(translate(-100%, -50%))
+    top: 50%
+    left: 100%
+    @include display(flex)
+    @include flex-direction(column)
+    @include align-items(flex-end)
+    align-content: stretch
+    a
+      .start-screen__social-button__item
+        cursor: pointer
+        @include display(flex)
+        @include align-items(center)
+        @include justify-content(center)
+        width: $social-cell-size
+        height: $social-cell-size
+        border-left: $border-width solid $border-color-social
+        border-right: $border-width solid $border-color-social
+        border-bottom: $border-width solid $border-color-social
+        text-align: center
+        &:hover
+          background-color: rgba(0,0,0,0.3)
+      &:first-child
+        .start-screen__social-button__item
+          border-top: $border-width solid $border-color-social
+  .start-screen__title
+    position: absolute
+    left: 50%
+    top: 50%
+    @include transform(translate(-50%, -50%))
+    text-align: center
+    max-width: 800px
+    .start-screen__title__logo
+      img
+        width: 25%
+        margin-bottom: 5px
+    .start-screen__title__brand-name
+      +title-lettering()
+      max-width: 800px
+    .start-screen__title__description
+      +lettering($spacing: 2px, $font-size: 1.2rem, $font-weight: 300)
+      margin-top: 10px
+      line-height: 2rem
+    .start-screen__title__sweeties
+      margin-top: 60px
+      +lettering($spacing: 1px, $font-size: 0.7rem, $font-weight: 300)
+      @include display(flex)
+      @include justify-content(center)
+      .start-screen__title__sweeties--left, .start-screen__title__sweeties--right
+        padding-left: 20px
+        padding-right: 20px
+  .start-screen__bouncing-arrow
+    font-size: 2em
+    position: absolute
+    top: 100%
+    left: 50%
+    @include transform(translate(-50%, -100%))
+    @media screen and (max-width: 800px)
+      display: none
+
+.quality
+  background-color: rgba(0,0,0,0.0)
+  padding-top: 80px
+  padding-bottom: 80px
+  @include display(flex)
+  @include justify-content(center)
+  .quality__text
+    max-width: 800px
+    p
+      padding-left: 20px
+      padding-right: 20px
+      line-height: 150%
+
+.gallery
+  background-color: rgba(0,0,0,0.0)
+  padding-bottom: 80px
+  .gallery__item
+    width: 100%
+    height: 100%
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    position: relative
+  .gallery__content__left-column
+    float: left
+    padding-bottom: 40px
+    .gallery__content__first-row
+      width: 50vw
+      //height: 60vh
+      background-color: black
+      //float: left
+      //@include display(flex)
+      .gallery__content__first-row__left__item
+        +border-gallery
+        width: 50vw*1/2
+        height: 50vw*1/2
+        float: left
+
+        +gallery-layers
+        &:hover
+          +gallery-hover-effect
+      .gallery__content__first-row__right__item
+        +border-gallery
+        width: 50vw*1/2
+        height: 50vw*1/2
+        float: right
+
+        +gallery-layers
+        &:hover
+          +gallery-hover-effect
+    .gallery__content__second-row
+      width: 50vw
+      //float: left
+      //height: 30vh
+      background-color: black
+      //@include display(flex)
+      .gallery__content__second-row__left__item
+        +border-gallery
+        float: left
+        width: 50vw*1/2
+        height: 50vw*1/2
+
+        +gallery-layers
+        &:hover
+          +gallery-hover-effect
+      .gallery__content__second-row__right__item
+        +border-gallery
+        float: right
+        width: 50vw*1/2
+        height: 50vw*1/2
+
+        +gallery-layers
+        &:hover
+          +gallery-hover-effect
+
+  .gallery__content__right-column
+    float: right
+    padding-bottom: 40px
+    .gallery__content__big-photo
+      +border-gallery
+      width: 50vw
+      height: 100vw*1/2
+      +gallery-layers
+      &:hover
+        +gallery-hover-effect
+  h1
+    padding-bottom: 12px
+  .gallery__footer-text
+    +lettering()
+    text-align: center
+
+
+
+.contact-us
+  background-color: black
+  @include display(flex)
+  @include justify-content(center)
+  @include flex-wrap(wrap)
+  h1
+    padding-bottom: 15px
+  .contact-us__title
+    width: 100%
+    max-width: 800px
+  .contact-us__map
+    width: 100%
+    height: 50vh
+    #map
+      width: 100%
+      height: 100%
+  .contact-us__text
+    width: 100%
+    max-width: 800px
+    padding-top: 25px
+    padding-bottom: 25px
+    h2
+      padding-top: 25px
+      &:nth-of-type(1)
+        padding-top: 0
+    p
+      padding-left: 20px
+      padding-right: 20px
+
+.footer
+  background-color: #000
+  font-family: 'Lato', Helvetica Neue, sans-serif
+  font-size: 0.8em
+  font-weight: 100
+  padding-left: 20px
+  padding-right: 20px
+  @include display(flex)
+  @include justify-content(center)
