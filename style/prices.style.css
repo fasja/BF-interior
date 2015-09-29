@@ -367,10 +367,14 @@ p {
     .payment a img {
       height: 1em;
       transition: 0.5s ease-in-out; }
+    .payment a span.no-underline {
+      color: #337AB7; }
     .payment a:hover {
       text-decoration: none; }
       .payment a:hover span {
         border-bottom: 1px solid #337ab7; }
+      .payment a:hover span.no-underline {
+        border-bottom: none; }
   .payment .payment__method {
     border-bottom: 1px solid #dddddd; }
   .payment .collapse {
