@@ -270,10 +270,14 @@ p
       height: 1em
       transition: 0.5s ease-in-out
       //@include transform(rotate(-90deg))
+    span.no-underline
+      color: #337AB7
     &:hover
       text-decoration: none
       span
         border-bottom: 1px solid #337ab7
+      span.no-underline
+        border-bottom: none
   .payment__method
     border-bottom: 1px solid #dddddd
   .collapse
