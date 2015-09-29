@@ -366,19 +366,23 @@ a {
           background-color: #000000;
           opacity: 0.5; }
         .gallery .gallery__content__left-column .gallery__content__first-row .gallery__content__first-row__left__item .gallery-item-title {
+          width: 100%;
+          padding-bottom: 10px;
+          padding-top: 10px;
           font-family: "Lato", Helvetica Neue, sans-serif;
           font-weight: 300;
           font-size: 1.5rem;
           letter-spacing: 2px;
           position: absolute;
           left: 50%;
-          top: 50%;
+          bottom: 0;
           text-align: center;
-          -webkit-transform: translateX(-50%) translateY(-25%);
-          -moz-transform: translateX(-50%) translateY(-25%);
-          -ms-transform: translateX(-50%) translateY(-25%);
-          -o-transform: translateX(-50%) translateY(-25%);
-          transform: translateX(-50%) translateY(-25%);
+          background-color: #000;
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          transform: translateX(-50%);
           color: white;
           display: none; }
         .gallery .gallery__content__left-column .gallery__content__first-row .gallery__content__first-row__left__item:hover {
@@ -402,19 +406,23 @@ a {
           background-color: #000000;
           opacity: 0.5; }
         .gallery .gallery__content__left-column .gallery__content__first-row .gallery__content__first-row__right__item .gallery-item-title {
+          width: 100%;
+          padding-bottom: 10px;
+          padding-top: 10px;
           font-family: "Lato", Helvetica Neue, sans-serif;
           font-weight: 300;
           font-size: 1.5rem;
           letter-spacing: 2px;
           position: absolute;
           left: 50%;
-          top: 50%;
+          bottom: 0;
           text-align: center;
-          -webkit-transform: translateX(-50%) translateY(-25%);
-          -moz-transform: translateX(-50%) translateY(-25%);
-          -ms-transform: translateX(-50%) translateY(-25%);
-          -o-transform: translateX(-50%) translateY(-25%);
-          transform: translateX(-50%) translateY(-25%);
+          background-color: #000;
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          transform: translateX(-50%);
           color: white;
           display: none; }
         .gallery .gallery__content__left-column .gallery__content__first-row .gallery__content__first-row__right__item:hover {
@@ -441,19 +449,23 @@ a {
           background-color: #000000;
           opacity: 0.5; }
         .gallery .gallery__content__left-column .gallery__content__second-row .gallery__content__second-row__left__item .gallery-item-title {
+          width: 100%;
+          padding-bottom: 10px;
+          padding-top: 10px;
           font-family: "Lato", Helvetica Neue, sans-serif;
           font-weight: 300;
           font-size: 1.5rem;
           letter-spacing: 2px;
           position: absolute;
           left: 50%;
-          top: 50%;
+          bottom: 0;
           text-align: center;
-          -webkit-transform: translateX(-50%) translateY(-25%);
-          -moz-transform: translateX(-50%) translateY(-25%);
-          -ms-transform: translateX(-50%) translateY(-25%);
-          -o-transform: translateX(-50%) translateY(-25%);
-          transform: translateX(-50%) translateY(-25%);
+          background-color: #000;
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          transform: translateX(-50%);
           color: white;
           display: none; }
         .gallery .gallery__content__left-column .gallery__content__second-row .gallery__content__second-row__left__item:hover {
@@ -477,19 +489,23 @@ a {
           background-color: #000000;
           opacity: 0.5; }
         .gallery .gallery__content__left-column .gallery__content__second-row .gallery__content__second-row__right__item .gallery-item-title {
+          width: 100%;
+          padding-bottom: 10px;
+          padding-top: 10px;
           font-family: "Lato", Helvetica Neue, sans-serif;
           font-weight: 300;
           font-size: 1.5rem;
           letter-spacing: 2px;
           position: absolute;
           left: 50%;
-          top: 50%;
+          bottom: 0;
           text-align: center;
-          -webkit-transform: translateX(-50%) translateY(-25%);
-          -moz-transform: translateX(-50%) translateY(-25%);
-          -ms-transform: translateX(-50%) translateY(-25%);
-          -o-transform: translateX(-50%) translateY(-25%);
-          transform: translateX(-50%) translateY(-25%);
+          background-color: #000;
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          transform: translateX(-50%);
           color: white;
           display: none; }
         .gallery .gallery__content__left-column .gallery__content__second-row .gallery__content__second-row__right__item:hover {
@@ -515,19 +531,23 @@ a {
         background-color: #000000;
         opacity: 0.5; }
       .gallery .gallery__content__right-column .gallery__content__big-photo .gallery-item-title {
+        width: 100%;
+        padding-bottom: 10px;
+        padding-top: 10px;
         font-family: "Lato", Helvetica Neue, sans-serif;
         font-weight: 300;
         font-size: 1.5rem;
         letter-spacing: 2px;
         position: absolute;
         left: 50%;
-        top: 50%;
+        bottom: 0;
         text-align: center;
-        -webkit-transform: translateX(-50%) translateY(-25%);
-        -moz-transform: translateX(-50%) translateY(-25%);
-        -ms-transform: translateX(-50%) translateY(-25%);
-        -o-transform: translateX(-50%) translateY(-25%);
-        transform: translateX(-50%) translateY(-25%);
+        background-color: #000;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
         color: white;
         display: none; }
       .gallery .gallery__content__right-column .gallery__content__big-photo:hover {
