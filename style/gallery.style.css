@@ -194,7 +194,8 @@ a {
       padding-top: 35px;
       padding-left: 55px;
       padding-right: 75px;
-      overflow: hidden; }
+      overflow: scroll;
+      max-height: 70%; }
       .work .work__description .work__description__text h1 {
         text-align: left; }
       .work .work__description .work__description__text p {

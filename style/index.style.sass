@@ -36,6 +36,7 @@ $text-color: white
 
 =gallery-hover-effect()
   cursor: pointer
+  @include filter(grayscale(1%))
   .gallery-overlay
     opacity: 0.2
     transition: 0.4s
@@ -282,6 +283,7 @@ a
   .gallery__content__left-column
     float: left
     padding-bottom: 40px
+
     .gallery__content__first-row
       width: 50vw
       //height: 60vh
@@ -293,7 +295,7 @@ a
         width: 50vw*1/2
         height: 50vw*1/2
         float: left
-
+        @include filter(grayscale(100%))
         +gallery-layers
         &:hover
           +gallery-hover-effect
@@ -302,7 +304,7 @@ a
         width: 50vw*1/2
         height: 50vw*1/2
         float: right
-
+        @include filter(grayscale(100%))
         +gallery-layers
         &:hover
           +gallery-hover-effect
@@ -317,7 +319,7 @@ a
         float: left
         width: 50vw*1/2
         height: 50vw*1/2
-
+        @include filter(grayscale(100%))
         +gallery-layers
         &:hover
           +gallery-hover-effect
@@ -326,7 +328,7 @@ a
         float: right
         width: 50vw*1/2
         height: 50vw*1/2
-
+        @include filter(grayscale(100%))
         +gallery-layers
         &:hover
           +gallery-hover-effect
@@ -338,14 +340,19 @@ a
       +border-gallery
       width: 50vw
       height: 100vw*1/2
+      @include filter(grayscale(100%))
       +gallery-layers
       &:hover
         +gallery-hover-effect
+  &:hover
+    @include filter(grayscale(1%))
   h1
     padding-bottom: 12px
   .gallery__footer-text
     +lettering()
     text-align: center
+    .gallery__footer-social
+      border-bottom: dashed 1px
 
 
 
