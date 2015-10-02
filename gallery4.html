@@ -11,8 +11,10 @@
     <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
 
+    <link rel="stylesheet" href="magnific-popup-master/dist/magnific-popup.css"/>
     <link rel="stylesheet" href="style/gallery.style.css"/>
 
+    <script src="Magnific-Popup-master/dist/jquery.magnific-popup.js"></script>
     <script src="script/gallery.script.js"></script>
 </head>
 <body>
@@ -33,7 +35,9 @@
             </a>
         </div>
         <div class="navbar__menu__group navbar__menu__group--center">
-            <div class="navbar__menu__item navbar__menu__item--stroked">Заказать</div>
+            <a class="popup-with-form" href="#form">
+                <div class="navbar__menu__item navbar__menu__item--stroked">Заказать</div>
+            </a>
         </div>
         <div class="navbar__menu__group navbar__menu__group--right">
             <div class="navbar__menu__item">
@@ -48,6 +52,16 @@
             </div>
         </div>
         <div class="work__description">
+            <div class="work__description__arrows">
+                <a class="work__description__arrows__item work__description__arrows__previous" href="#">
+                    <img class="previous-gallery" src="img/arrow.svg" alt="logo"/>
+                    <p>Предыдущая<br>работа</p>
+                </a>
+                <a class="work__description__arrows__item work__description__arrows__next" href="#">
+                    <p>Следующая<br>работа</p>
+                    <img class="next-gallery" src="img/arrow.svg" alt="logo"/>
+                </a>
+            </div>
             <div class="work__description__text">
                 <h1>Холодильник-<br/>кофейные зёрна</h1>
                 <p>
@@ -68,6 +82,20 @@
         </div>
     </div>
 </div>
-
+<form id="form" class="white-popup-block mfp-hide">
+    <h1>Оставьте заявку</h1>
+    <ul>
+        <li>
+            <input class="name" name="name" placeholder="Имя">
+        </li>
+        <li>
+            <input class="email" name="email" placeholder="E-mail">
+        </li>
+        <li>
+            <input class="phone" name="phone" placeholder="Телефон">
+        </li>
+    </ul>
+    <div class="button">Отправить</div>
+</form>
 </body>
 </html>

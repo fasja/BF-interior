@@ -4,6 +4,11 @@ function setGalleryHeight() {
 
 //ждем полной загрузки документа
 $(document).ready(function () {
+    $('.popup-with-form').magnificPopup({
+        type: 'inline',
+        preloader: false
+    });
+
     $(".work").css("height", $(".content").height() - $(".navbar__menu").height());
     $(function () {
         //console.log($(".content").height() - $(".navbar__menu").height())
@@ -43,5 +48,22 @@ $(document).ready(function () {
         fotorama.resize({
             height: ($(".content").height() - $(".navbar__menu").height() - 64 - 4)
         });
+    });
+
+    $(".button").click(function send(){
+        $.post(
+            "./mail.php",
+            {
+                name: $('.name').val(),
+                phone: $('.phone').val(),
+                email: $('.email').val()
+            }
+        );
+        //alert('Имя: ' + name + '\n' + 'Почта: ' + email + '\n' + 'Телефон: ' + phone );
+        alert("Ваша заявка получена. Мы скоро свяжемся с вами.");
+        $('.name').val('');
+        $('.email').val('');
+        $('.phone').val('');
+        $.magnificPopup.close();
     });
 });

@@ -591,7 +591,7 @@ a {
     letter-spacing: 2px;
     text-align: center; }
     .gallery .gallery__footer-text .gallery__footer-social {
-      border-bottom: dashed 1px; }
+      border-bottom: solid 1px; }
 
 .contact-us {
   background-color: black;
@@ -665,5 +665,49 @@ a {
   -o-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center; }
+
+.white-popup-block {
+  background-color: #fff;
+  color: #000; }
+
+.mfp-content {
+  max-width: 500px;
+  width: 50%; }
+
+form h1 {
+  padding-top: 44px; }
+form ul {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+  form ul li {
+    border-bottom: 1px solid #dddddd; }
+    form ul li input {
+      border-radius: 0;
+      border: none;
+      margin: 0;
+      padding: 0;
+      padding-left: 30px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 1.2em;
+      font-family: "Lato", Helvetica Neue, sans-serif;
+      font-weight: 300; }
+    form ul li:last-child {
+      border-bottom: none; }
+form .button {
+  width: 100%;
+  background-color: yellow;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  font-family: "Lato", Helvetica Neue, sans-serif;
+  font-weight: 300;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  form .button:hover {
+    cursor: pointer; }
 
 /*# sourceMappingURL=index.style.css.map */
