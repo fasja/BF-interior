@@ -19,7 +19,8 @@ $(document).ready(function () {
                 loop: 'true',
                 height: ($(".content").height() - $(".navbar__menu").height() - 64 - 4),
                 thumbheight: '64',
-                resize: 'true'
+                resize: 'true',
+                keyboard: 'true'
             }
         );
     });

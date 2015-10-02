@@ -66,6 +66,9 @@ a {
   a:visited {
     color: #ffffff; }
 
+section {
+  width: 100vw; }
+
 .navbar__menu {
   position: fixed;
   top: 0;
