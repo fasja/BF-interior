@@ -622,6 +622,7 @@ section {
   .contact-us .contact-us__title {
     width: 100%; }
   .contact-us .contact-us__map {
+    width: 100vw;
     height: 50vh; }
     .contact-us .contact-us__map #map {
       width: 100%;
@@ -705,5 +706,15 @@ form .button {
   padding-bottom: 15px; }
   form .button:hover {
     cursor: pointer; }
+
+.example-popup {
+  position: relative;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #ffffff;
+  color: #000000; }
+  .example-popup p {
+    padding: 0;
+    text-align: left; }
 
 /*# sourceMappingURL=index.style.css.map */

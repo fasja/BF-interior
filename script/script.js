@@ -3,6 +3,12 @@ $(document).ready(function () {
         type: 'inline',
         preloader: false
     });
+    $('.popup-ajax').magnificPopup({
+        type: 'ajax',
+        //mainClass: 'mfp-fade',
+        alignTop: true,
+        overflowY: 'scroll'
+    });
 
     var initialOpacity = parseFloat(
         $('.background > .background__overlay').css('background-color').split(',')[3], 10
