@@ -1,6 +1,7 @@
 @import "bourbon/bourbon"
 //@import url(//fonts.googleapis.com/css?family=Lato:100,300,400,700,900)
 //@import url(http://webfonts.ru/import/intro.css)
+@import url(http://webfonts.ru/import/robotonew.css)
 
 $font-stack: Lato, Helvetica Neue, sans-serif
 $border-width: 5px
@@ -10,9 +11,12 @@ $social-cell-size: 66px
 $text-color: white
 
 =menu-lettering($spacing: 2px)
-  font-family: Lato, Helvetica Neue, sans-serif
+  //font-family: 'Lato', Helvetica Neue, sans-serif
+  //font-weight: 300
+  //font-size: 0.7rem
+  font-family: 'Roboto Condensed New', Helvetica Neue, sans-serif
   font-weight: 300
-  font-size: 0.7rem
+  font-size: 0.9rem
   text-transform: uppercase
   letter-spacing: $spacing
 
@@ -97,11 +101,13 @@ p
   color: #FFFFFF
   +menu-lettering()
   @include display(flex)
-  @include flex-wrap(wrap)
+  //@include flex-wrap(wrap)
   @include justify-content(flex-end)
+  @media screen and (max-width: 1200px)
+    @include justify-content(space-around)
   .navbar__menu__group
     @include display(flex)
-    @include flex-wrap(wrap)
+    //@include flex-wrap(wrap)
     @include justify-content(center)
   .navbar__menu__group--logo
     width: 33.333%
@@ -139,7 +145,7 @@ p
       color: black
       a
         color: black
-      //font-weight: 500
+  //font-weight: 500
   .navbar__menu__item--stroked
     padding: 25px - $border-width
     border: $border-width solid $border-color-cta

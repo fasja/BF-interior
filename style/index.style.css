@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url(http://webfonts.ru/import/intro.css);
 @import url(http://webfonts.ru/import/lato.css);
+@import url(http://webfonts.ru/import/robotonew.css);
 html, body {
   color: white;
   height: 100%;
@@ -74,9 +75,9 @@ section {
   top: 0;
   width: 100%;
   z-index: 100;
-  font-family: "Lato", Helvetica Neue, sans-serif;
+  font-family: "Roboto Condensed New", Helvetica Neue, sans-serif;
   font-weight: 300;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   display: -webkit-box;
@@ -102,6 +103,17 @@ section {
   -o-justify-content: flex-end;
   justify-content: flex-end;
   -ms-flex-pack: end; }
+  @media screen and (max-width: 1200px) {
+    .navbar__menu {
+      -webkit-box-pack: distribute;
+      -moz-box-pack: distribute;
+      box-pack: distribute;
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
+      -o-justify-content: space-around;
+      justify-content: space-around;
+      -ms-flex-pack: distribute; } }
   .navbar__menu a {
     text-decoration: none; }
     .navbar__menu a:visited {
@@ -114,13 +126,6 @@ section {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-lines: multiple;
-    -moz-box-lines: multiple;
-    box-lines: multiple;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     -webkit-box-pack: center;
     -moz-box-pack: center;
     box-pack: center;
@@ -129,7 +134,16 @@ section {
     -ms-justify-content: center;
     -o-justify-content: center;
     justify-content: center;
-    -ms-flex-pack: center; }
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center; }
   .navbar__menu .navbar__menu__group--left {
     width: 33.333%; }
     @media screen and (max-width: 800px) {

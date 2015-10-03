@@ -1,6 +1,7 @@
 @import "bourbon/bourbon"
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900)
-@import url(http://webfonts.ru/import/intro.css)
+//@import url(http://webfonts.ru/import/intro.css)
+@import url(http://webfonts.ru/import/robotonew.css)
 
 $font-stack: Helvetica Neue, sans-serif
 $border-width: 5px
@@ -10,9 +11,12 @@ $social-cell-size: 66px
 $text-color: white
 
 =menu-lettering($spacing: 2px)
-  font-family: 'Lato', Helvetica Neue, sans-serif
+  //font-family: 'Lato', Helvetica Neue, sans-serif
+  //font-weight: 300
+  //font-size: 0.7rem
+  font-family: 'Roboto Condensed New', Helvetica Neue, sans-serif
   font-weight: 300
-  font-size: 0.7rem
+  font-size: 0.9rem
   text-transform: uppercase
   letter-spacing: $spacing
 
@@ -81,17 +85,22 @@ a
 //some styles
 
 .navbar__menu
+  //position: fixed
   top: 0
   width: 100%
   z-index: 100
+  background-color: #000
+  color: #FFFFFF
   +menu-lettering()
   @include display(flex)
-  @include flex-wrap(wrap)
+  //@include flex-wrap(wrap)
   @include justify-content(flex-end)
+  @media screen and (max-width: 1200px)
+    @include justify-content(space-around)
   .navbar__menu__group
     @include display(flex)
-    @include flex-wrap(wrap)
-  //@include justify-content(center)
+    //@include flex-wrap(wrap)
+    @include justify-content(center)
   .navbar__menu__group--logo
     width: 33.333%
     @include justify-content(flex-start)
@@ -100,11 +109,11 @@ a
     a
       height: 66.666%
       text-align: center
+      padding-left: 10px
       img
         height: 100%
   .navbar__menu__group--left
     width: 33.333%
-    @include flex-wrap(no-wrap)
     @media screen and (max-width: 800px)
       display: none
   .navbar__menu__group--center
@@ -114,8 +123,10 @@ a
   .navbar__menu__group--right
     width: 16.6665%
     @include justify-content(flex-end)
-    a
-      text-decoration: none
+  a
+    text-decoration: none
+    color: $text-color
+    &:visited
       color: $text-color
   .navbar__menu__item
     padding: 25px
@@ -123,9 +134,10 @@ a
     text-align: center
     &:hover
       background-color: $border-color-cta
-      color: #000000
+      color: black
       a
-        color: #000000
+        color: black
+  //font-weight: 500
   .navbar__menu__item--stroked
     padding: 25px - $border-width
     border: $border-width solid $border-color-cta

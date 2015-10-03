@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(http://webfonts.ru/import/robotonew.css);
 html, body {
   background-color: #FCFCFC;
   color: black;
@@ -54,9 +55,9 @@ p {
   z-index: 100;
   background-color: #000;
   color: #FFFFFF;
-  font-family: Lato, Helvetica Neue, sans-serif;
+  font-family: "Roboto Condensed New", Helvetica Neue, sans-serif;
   font-weight: 300;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   display: -webkit-box;
@@ -66,13 +67,6 @@ p {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  box-lines: multiple;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-pack: end;
   -moz-box-pack: end;
   box-pack: end;
@@ -82,6 +76,17 @@ p {
   -o-justify-content: flex-end;
   justify-content: flex-end;
   -ms-flex-pack: end; }
+  @media screen and (max-width: 1200px) {
+    .navbar__menu {
+      -webkit-box-pack: distribute;
+      -moz-box-pack: distribute;
+      box-pack: distribute;
+      -webkit-justify-content: space-around;
+      -moz-justify-content: space-around;
+      -ms-justify-content: space-around;
+      -o-justify-content: space-around;
+      justify-content: space-around;
+      -ms-flex-pack: distribute; } }
   .navbar__menu .navbar__menu__group {
     display: -webkit-box;
     display: -moz-box;
@@ -90,13 +95,6 @@ p {
     display: -moz-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-lines: multiple;
-    -moz-box-lines: multiple;
-    box-lines: multiple;
-    -webkit-flex-wrap: wrap;
-    -moz-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
     -webkit-box-pack: center;
     -moz-box-pack: center;
     box-pack: center;

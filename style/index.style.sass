@@ -2,6 +2,7 @@
 //@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic)
 @import url(http://webfonts.ru/import/intro.css)
 @import url(http://webfonts.ru/import/lato.css)
+@import url(http://webfonts.ru/import/robotonew.css)
 
 
 $font-stack: Helvetica Neue, sans-serif
@@ -12,9 +13,12 @@ $social-cell-size: 66px
 $text-color: white
 
 =menu-lettering($spacing: 2px)
-  font-family: 'Lato', Helvetica Neue, sans-serif
+  //font-family: 'Lato', Helvetica Neue, sans-serif
+  //font-weight: 300
+  //font-size: 0.7rem
+  font-family: 'Roboto Condensed New', Helvetica Neue, sans-serif
   font-weight: 300
-  font-size: 0.7rem
+  font-size: 0.9rem
   text-transform: uppercase
   letter-spacing: $spacing
 
@@ -150,16 +154,20 @@ section
   @include display(flex)
   @include flex-wrap(wrap)
   @include justify-content(flex-end)
+  @media screen and (max-width: 1200px)
+    @include justify-content(space-around)
   a
     text-decoration: none
     &:visited
       color: #FFFFFF
   .navbar__menu__group
     @include display(flex)
-    @include flex-wrap(wrap)
+    //@include flex-wrap(wrap)
     @include justify-content(center)
+    @include align-items(center)
   .navbar__menu__group--left
     width: 33.333%
+    //@include flex-wrap(no-wrap)
     @media screen and (max-width: 800px)
       display: none
   .navbar__menu__group--center
