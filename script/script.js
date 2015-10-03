@@ -22,8 +22,8 @@ $(document).ready(function () {
         myMap = new ymaps.Map('map', {
             // При инициализации карты обязательно нужно указать
             // её центр и коэффициент масштабирования.
-            center: [55.76, 37.64], // Москва
-            zoom: 12,
+            center: [55.821, 37.611], // Москва
+            zoom: 11,
             controls: []
         });
         myMap.behaviors.disable('scrollZoom');
@@ -33,6 +33,30 @@ $(document).ready(function () {
             }
         });
         myMap.controls.add(zoomControl);
+        myMap.geoObjects
+            .add(new ymaps.Placemark([55.906, 37.576], {
+                balloonContent: 'Абрамцевская улица, 30'
+            }, {preset: 'islands#dotIcon',
+                iconColor: 'red'
+            }))
+            .add(new ymaps.Placemark([55.814, 37.693], {
+                balloonContent: 'Краснобогатырская улица, 2'
+            }, {preset: 'islands#dotIcon',
+                iconColor: 'red'
+            }))
+            .add(new ymaps.Placemark([55.807, 37.649], {
+                balloonContent: 'Новоалексеевская улица, 16'
+            }, {preset: 'islands#dotIcon',
+                iconColor: 'red'
+            }))
+            .add(new ymaps.Placemark([55.721, 37.695], {
+                balloonContent: 'Волгоградский проспект, 32'
+            }, {preset: 'islands#dotIcon',
+                iconColor: 'red'
+            }));
+        myMap.events.add('actionend', function(e){
+            console.log(myMap.getCenter());
+        });
 
     }
     $(window).scroll(function (event) {
