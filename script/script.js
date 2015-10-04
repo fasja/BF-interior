@@ -102,22 +102,27 @@ $(document).ready(function () {
         myMap.controls.add(zoomControl);
         myMap.geoObjects
             .add(new ymaps.Placemark([55.906, 37.576], {
-                balloonContent: 'Абрамцевская улица, 30'
+                balloonContent: '<strong>Главный офис</strong><br>улица Абрамцевская, 30'
             }, {preset: 'islands#dotIcon',
                 iconColor: 'red'
             }))
             .add(new ymaps.Placemark([55.814, 37.693], {
-                balloonContent: 'Краснобогатырская улица, 2'
+                balloonContent: '<strong>Мастерская</strong><br>улица Краснобогатырская, 2'
             }, {preset: 'islands#dotIcon',
                 iconColor: 'red'
             }))
             .add(new ymaps.Placemark([55.807, 37.649], {
-                balloonContent: 'Новоалексеевская улица, 16'
+                balloonContent: '<strong>Мастерская</strong><br>улица Новоалексеевская, 16'
+            }, {preset: 'islands#dotIcon',
+                iconColor: 'red'
+            }))
+            .add(new ymaps.Placemark([55.789, 37.473], {
+                balloonContent: '<strong>Мастерская</strong><br>улица Берзарина, 30'
             }, {preset: 'islands#dotIcon',
                 iconColor: 'red'
             }))
             .add(new ymaps.Placemark([55.721, 37.695], {
-                balloonContent: 'Волгоградский проспект, 32'
+                balloonContent: '<strong>Мастерская</strong><br>Волгоградский проспект, 32'
             }, {preset: 'islands#dotIcon',
                 iconColor: 'red'
             }));

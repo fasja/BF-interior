@@ -1,0 +1,284 @@
+@import "bourbon/bourbon"
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900)
+//@import url(http://webfonts.ru/import/intro.css)
+@import url(http://webfonts.ru/import/robotonew.css)
+
+$font-stack: Helvetica Neue, sans-serif
+$border-width: 5px
+$border-color-social: white
+$border-color-cta: #ffed2c
+$social-cell-size: 66px
+$text-color: white
+
+=menu-lettering($spacing: 2px)
+  //font-family: 'Lato', Helvetica Neue, sans-serif
+  //font-weight: 300
+  //font-size: 0.7rem
+  font-family: 'Roboto Condensed New', Helvetica Neue, sans-serif
+  font-weight: 300
+  font-size: 0.9rem
+  text-transform: uppercase
+  letter-spacing: $spacing
+
+=lettering($spacing: 2px, $font-size: 1rem, $font-weight: 100)
+  font-family: 'Lato', Helvetica Neue, sans-serif
+  font-weight: $font-weight
+  font-size: $font-size
+  text-transform: uppercase
+  letter-spacing: $spacing
+
+=title-lettering($spacing: 2px)
+  font-family: 'Intro', Helvetica Neue, sans-serif
+  text-transform: uppercase
+  font-size: 6rem
+
+html, body
+  background-color: black
+  color: white
+  height: 100%
+  width: 100%
+  font-family: $font-stack
+  margin: 0
+  padding: 0
+
+p
+  margin: 0
+  padding: 0
+  font-family: 'Lato', Helvetica Neue, sans-serif
+  font-weight: 300
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 0 0 7px 0
+  font-family: 'Lato', Helvetica Neue, sans-serif
+  font-weight: 700
+  text-transform: uppercase
+
+h1
+  width: 100%
+  text-align: center
+  font-size: 2rem
+  letter-spacing: 3px
+  &:after
+    content: "\a —"
+    white-space: pre
+    font-weight: 100
+
+h2
+  width: 100%
+  text-align: center
+  font-size: 1.5rem
+  letter-spacing: 4px
+//&:after
+  content: "\a —"
+  white-space: pre
+  font-weight: 100
+a
+  text-decoration: none
+  color: #ffffff
+  &:visited
+    color: #ffffff
+
+.content
+  height: 100vh
+  position: relative
+//some styles
+
+.navbar__menu
+  //position: fixed
+  top: 0
+  width: 100%
+  z-index: 100
+  background-color: #000
+  color: #FFFFFF
+  +menu-lettering()
+  @include display(flex)
+  //@include flex-wrap(wrap)
+  @include justify-content(flex-end)
+  @media screen and (max-width: 1200px)
+    @include justify-content(space-around)
+  .navbar__menu__group
+    @include display(flex)
+    //@include flex-wrap(wrap)
+    @include justify-content(center)
+  .navbar__menu__group--logo
+    width: 33.333%
+    @include justify-content(flex-start)
+    @include display(flex)
+    @include align-items(center)
+    a
+      height: 66.666%
+      text-align: center
+      padding-left: 10px
+      img
+        height: 100%
+  .navbar__menu__group--left
+    width: 33.333%
+    @media screen and (max-width: 800px)
+      display: none
+  .navbar__menu__group--center
+    width: 16.6665%
+    @media screen and (max-width: 800px)
+      display: none
+  .navbar__menu__group--right
+    width: 16.6665%
+    @include justify-content(flex-end)
+  a
+    text-decoration: none
+    color: $text-color
+    &:visited
+      color: $text-color
+  .navbar__menu__item
+    padding: 25px
+    cursor: pointer
+    text-align: center
+    &:hover
+      background-color: $border-color-cta
+      color: black
+      a
+        color: black
+  //font-weight: 500
+  .navbar__menu__item--stroked
+    padding: 25px - $border-width
+    border: $border-width solid $border-color-cta
+
+.work
+  position: absolute
+  width: 100vw
+  height: 100%
+  @include display(flex)
+  .work__gallery
+    width: 100%*2/3
+    .work__gallery__fotorama
+  .work__description
+    width: 100%*1/3
+    background-color: #fff
+    color: #000
+    position: relative
+    .work__description__arrows
+      height: 67px
+      border-bottom: 1px solid #EAEAEA
+      @include display(flex)
+      a
+        color: #000
+      .work__description__arrows__item
+        cursor: pointer
+        width: 50%
+        height: 100%
+        font-family: 'Lato'
+        font-weight: 300
+        font-size: 1.2em
+        transition: 0.5s ease-in-out
+        @include display(flex)
+        @include align-items(center)
+        //@include justify-content(center)
+        &:hover
+          background-color: #EAEAEA
+          transition: 0.5s ease-in-out
+      .work__description__arrows__previous
+        padding-left: 20px
+        p
+          text-align: left
+          width: 100%
+      .work__description__arrows__next
+        padding-right: 20px
+        border-left: 1px solid #EAEAEA
+        p
+          text-align: right
+          width: 100%
+      img.previous-gallery
+        @include transform(rotate(-90deg))
+      img.next-gallery
+        @include transform(rotate(90deg))
+
+    .work__description__text
+      padding-top: 35px
+      padding-left: 55px
+      padding-right: 75px
+      overflow: scroll
+      max-height: 70%
+      h1
+        text-align: left
+      p
+        text-align: left
+        line-height: 150%
+    .work__description__navigation
+      color: #000
+      background-color: #fff
+      position: absolute
+      bottom: 0
+      width: 100%
+      border-top: 1px solid #EAEAEA
+      @include display(flex)
+      @include justify-content(center)
+      @include align-items(center)
+      .work__description__navigation__counter
+        font-family: 'Lato'
+        font-weight: 500
+        font-size: 1.2em
+        padding-left: 10px
+        padding-right: 10px
+      img.previous
+        @include transform(rotate(-90deg))
+        height: 80%
+        cursor: pointer
+      img.next
+        @include transform(rotate(90deg))
+        height: 80%
+        cursor: pointer
+
+
+.fotorama__thumb-border
+  border-color: $border-color-cta
+
+.white-popup-block
+  background-color: #fff
+  color: #000
+
+.mfp-content
+  max-width: 500px
+  width: 50%
+//margin-left: 25%
+
+form
+  h1
+    padding-top: 44px
+  ul
+    list-style: none
+    padding: 0
+    margin: 0
+    li
+      border-bottom: 1px solid #dddddd
+      input
+        //width: 100%
+        border-radius: 0
+        border: none
+        margin: 0
+        padding: 0
+        padding-left: 30px
+        padding-top: 10px
+        padding-bottom: 10px
+        //text-transform: uppercase
+        font-size: 1.2em
+        //letter-spacing: 2px
+        font-family: 'Lato', Helvetica Neue, sans-serif
+        font-weight: 300
+      //&:first-child
+        border-top: 1px solid #dddddd
+      &:last-child
+        border-bottom: none
+
+  .button
+    width: 100%
+    background-color: yellow
+    color: #000
+    text-align: center
+    text-transform: uppercase
+    font-size: 1.2em
+    letter-spacing: 2px
+    font-family: 'Lato', Helvetica Neue, sans-serif
+    font-weight: 300
+    padding-top: 15px
+    padding-bottom: 15px
+    &:hover
+      cursor: pointer

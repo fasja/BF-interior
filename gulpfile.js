@@ -50,26 +50,27 @@ gulp.task('jpg-resize-opimize', function(){
 });
 
 gulp.task('minify-static', function(){
-    gulp.src(['bootstrap/**/*.css', 'style/*.css'], {base: './'})
-        .pipe(uncss({
-            html: ['*.html']
-        }))
-        //.pipe(minifyCSS())
-        .pipe(gulp.dest('dist/'));
+
+    //gulp.src(['bootstrap/**/*.css'], {base: './'})
+    //    .pipe(uncss({
+    //        html: ['*.html']
+    //    }))
+    //    //.pipe(minifyCSS())
+    //    .pipe(gulp.dest('dist/'));
 
     gulp.src('*.html')
-        .pipe(htmlmin())
-        .pipe(gulp.dest('dist'));
+        //.pipe(htmlmin())
+        .pipe(gulp.dest('dist/'));
 
     gulp.src('./script/*.js')
-        .pipe(jsmin())
+        //.pipe(jsmin())
         .pipe(gulp.dest('dist/script'));
 
     gulp.src('Magnific-Popup-master/**/*.*')
         .pipe(gulp.dest('dist/Magnific-Popup-master/'));
 
-    gulp.src('style/dev/**/*.*')
-        .pipe(gulp.dest('dist/style/dev/'));
+    gulp.src('style/**/*.*')
+        .pipe(gulp.dest('dist/style/'));
 
     gulp.src('style/dev/**/*.*')
         .pipe(gulp.dest('dist/style/dev/'));
@@ -83,7 +84,7 @@ gulp.task('minify-static', function(){
     gulp.src('*.php')
         .pipe(gulp.dest('dist/'));
 
-    gulp.src(['bootstrap/fonts/**/*.*', 'bootstrap/js/**/*.*'], {base: './bootstrap'})
+    gulp.src(['bootstrap/fonts/**/*.*', 'bootstrap/js/**/*.*', 'bootstrap/css/**/*.*'], {base: './bootstrap'})
         .pipe(gulp.dest('dist/bootstrap'));
 });
 
