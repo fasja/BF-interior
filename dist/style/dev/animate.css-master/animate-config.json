@@ -1,0 +1,14 @@
+{
+
+  "attention_seekers": {
+    "bounce": true,
+    "flash": false,
+    "pulse": false,
+    "rubberBand": false,
+    "shake": false,
+    "swing": false,
+    "tada": false,
+    "wobble": false,
+    "jello": false
+  }
+}

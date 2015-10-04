@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Ferrari-граффити</title>
+    <!-- поправить название работы во избежание лютых факапов -->
+
+    <script src="script/dev/jquery/jquery-2.1.4.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+
+    <link rel="stylesheet" href="Magnific-Popup-master/dist/magnific-popup.css">
+    <link rel="stylesheet" href="style/gallery.style.css">
+
+    <script src="Magnific-Popup-master/dist/jquery.magnific-popup.js"></script>
+    <script src="script/gallery.script.js"></script>
+</head>
+<body>
+<div class="content">
+    <nav class="navbar__menu">
+        <div class="navbar__menu__group navbar__menu__group--logo">
+            <a href="index.html"><img src="img/logo2.svg" alt="logo"></a>
+        </div>
+        <div class="navbar__menu__group navbar__menu__group--left">
+            <a href="index.html#gallery-scroll-anchor">
+                <div class="navbar__menu__item">Работы</div>
+            </a>
+            <a href="prices.html">
+                <div class="navbar__menu__item">Услуги и цены</div>
+            </a>
+            <a href="index.html#contact-scroll-anchor">
+                <div class="navbar__menu__item">Контакты</div>
+            </a>
+        </div>
+        <div class="navbar__menu__group navbar__menu__group--center">
+            <a class="popup-with-form" href="#form">
+                <div class="navbar__menu__item navbar__menu__item--stroked">Заказать</div>
+            </a>
+        </div>
+        <div class="navbar__menu__group navbar__menu__group--right">
+            <div class="navbar__menu__item">
+                <nobr><a href="tel:+74996383073">+7 499 638-30-73</a></nobr>
+            </div>
+        </div>
+    </nav>
+    <div class="work">
+        <div class="work__gallery">
+            <div class="work__gallery__fotorama fotorama">
+                <img src="img/gallery/ferrari/frontcar.jpg" alt="">
+                <img src="img/gallery/ferrari/car1.jpg" alt="">
+                <img src="img/gallery/ferrari/car2.jpg" alt="">
+            </div>
+        </div>
+        <div class="work__description">
+            <div class="work__description__arrows">
+                <a class="work__description__arrows__item work__description__arrows__previous" href="gallery1.html">
+                    <img class="previous-gallery" src="img/arrow.svg" alt="logo">
+                    <p>Предыдущая<br>работа</p>
+                </a>
+                <a class="work__description__arrows__item work__description__arrows__next" href="gallery3.html">
+                    <p>Следующая<br>работа</p>
+                    <img class="next-gallery" src="img/arrow.svg" alt="logo">
+                </a>
+            </div>
+            <div class="work__description__text">
+                <h1>Ferrari-<br>граффити</h1>
+                <p>
+                    Машина мечты на своём балконе, куда выходят окна из детской комнаты.
+                    Когда ребёнок делает уроки и смотрит на свою мечту, то волей-неволей начинает
+                    что-то активно делать для достижения этой самой мечты. Эта потрясающая «Ferrari»
+                    стала шикарным подарком родителей для своего маленького сына.
+                </p>
+            </div>
+            <div class="work__description__navigation">
+                <img class="previous" src="img/arrow.svg" alt="logo">
+                <div class="work__description__navigation__counter">
+                    <span class="work__description__navigation__counter__item"></span> из
+                    <span class="work__description__navigation__counter__total"></span>
+                </div>
+                <img class="next" src="img/arrow.svg" alt="logo">
+            </div>
+        </div>
+    </div>
+</div>
+<form id="form" class="white-popup-block mfp-hide">
+    <h1>Оставьте заявку</h1>
+    <ul>
+        <li>
+            <input class="name" name="name" placeholder="Имя">
+        </li>
+        <li>
+            <input class="email" name="email" placeholder="E-mail">
+        </li>
+        <li>
+            <input class="phone" name="phone" placeholder="Телефон">
+        </li>
+    </ul>
+    <div class="button">Отправить</div>
+</form>
+</body>
+</html>
